@@ -2,6 +2,7 @@
   "name": "frontend-hiring-challenge",
   "version": "1.0.0",
   "description": "Leap test",
+  "homepage": "http://a11231g.github.io/aircall",
   "main": "index.js",
   "repository": "",
   "author": "",
@@ -10,7 +11,9 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "format": "prettier-standard \"src/**/*.js\" \"src/**/*.jsx\""
+    "format": "prettier-standard \"src/**/*.js\" \"src/**/*.jsx\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.6.0",
@@ -22,6 +25,7 @@
     "@mui/material": "^5.1.0",
     "@mui/styles": "^5.1.1",
     "@reduxjs/toolkit": "^1.6.2",
+    "gh-pages": "^3.2.3",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "react": "^17.0.2",
